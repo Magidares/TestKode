@@ -1,0 +1,23 @@
+#pragma once
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <imgui.h>
+#include <imgui_impl_glfw.h>
+#include <imgui_impl_opengl3.h>
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
+#include <iostream>
+#include <stdio.h>
+#include <string>
+#include <fstream>
+#include <vector>
+#include <sstream>
+#include <algorithm>
+#include <windows.h>
+#include <cmath>
+#include <map>
+#include <ctime>
+#include <cstdlib>
+#include <codecvt>
+#include <locale>
+#include <cwctype>

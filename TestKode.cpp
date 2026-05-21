@@ -505,10 +505,7 @@ int main() {
 				std::to_string(timestamp)
 				});
 
-			name[0] = '\0';
-			x[0] = '\0';
-			y[0] = '\0';
-			type[0] = '\0';
+			resultBuffer = result;
 		}
 
 		ImGui::End();

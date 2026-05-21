@@ -27,6 +27,7 @@ struct Space {
 Space space;
 
 int main() {
+	FreeConsole();
 
 	SetConsoleOutputCP(CP_UTF8);
 	SetConsoleCP(CP_UTF8);
@@ -89,8 +90,9 @@ int main() {
 
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		ImGui::DockSpaceOverViewport(0, ImGui::GetMainViewport(),
+		ImGuiID my_dockspace = ImGui::DockSpaceOverViewport(0, ImGui::GetMainViewport(),
 			ImGuiDockNodeFlags_NoUndocking);
+		ImGui::SetNextWindowDockID(my_dockspace, ImGuiCond_Once);
 
 		ImGui::Begin(u8"Список");
 
@@ -107,6 +109,8 @@ int main() {
 		}
 
 		ImGui::End();
+
+		ImGui::SetNextWindowDockID(my_dockspace, ImGuiCond_Once);
 
 		ImGui::Begin(u8"Действия");
 		if (ImGui::Button(u8"Сортировка по расстоянию"))
@@ -474,6 +478,8 @@ int main() {
 			exit(0);
 		}
 		ImGui::End();
+
+		ImGui::SetNextWindowDockID(my_dockspace, ImGuiCond_Once);
 
 		ImGui::Begin(u8"Добавить строку");
 
